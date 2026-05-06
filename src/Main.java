@@ -70,6 +70,34 @@ void main() {
     Optional<Trip> result8 = partie3.bestTrip(trips);
     System.out.println(result8);
 
+    System.out.println("Partie 4\n");
+
+    Partie4 partie4 = new Partie4();
+
+    System.out.println("exo10 \n");
+    trips = TripFactory.generateTrips(10);
+
+    double result10 = partie4.totalRevenueSequential(trips);
+    System.out.println(result10);
+
+    System.out.println("exo11 \n");
+    trips = TripFactory.generateTrips(10);
+
+    double result11 = partie4.totalRevenueParallel(trips);
+    System.out.println(result11);
+
+    System.out.println("exo12 \n");
+    trips = TripFactory.generateTrips(10);
+    Map<String, Long> result12 = partie4.countByCityParallel(trips);
+
+    result12.forEach((city, count) -> System.out.println(city + " : " + count));
+
+    System.out.println("exo13 \n");
+    trips = TripFactory.generateTrips(10);
+
+    List<Trip> result13 = partie4.premiumTripsParallel(trips);
+    result13.forEach(System.out::println);
+
 
 
 
