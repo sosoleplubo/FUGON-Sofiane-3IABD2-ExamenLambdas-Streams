@@ -56,6 +56,23 @@ void main() {
 
     System.out.println("Partie 3\n");
 
+    Partie3 partie3 = new Partie3();
+
+    System.out.println("exo7 \n");
+    trips = TripFactory.generateTrips(10);
+
+    List<Trip> result7 = partie3.top10ExpensiveTrips(trips);
+    result7.forEach(System.out::println);
+
+    System.out.println("exo8 \n");
+    trips = TripFactory.generateTrips(10);
+
+    Optional<Trip> result8 = partie3.bestTrip(trips);
+    System.out.println(result8);
+
+
+
+
 
 
 
